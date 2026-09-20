@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — RankForge Uploader</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1a1a1a; --muted:#5a5a5a; --line:#e2e2e2; --accent:#1a5fb4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141414; --fg:#eaeaea; --muted:#a0a0a0; --line:#2e2e2e; --accent:#7aa8e8; }
+  }
+  * { box-sizing:border-box; }
+  body { background:var(--bg); color:var(--fg); margin:0;
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 16px 72px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:32px; }
+  h1 { font-size:26px; margin:0 0 6px; letter-spacing:-.01em; }
+  .sub { color:var(--muted); margin:0; font-size:14px; }
+  h2 { font-size:18px; margin:32px 0 10px; }
+  p { margin:0 0 14px; }
+  ul { margin:0 0 14px; padding-left:22px; }
+  li { margin-bottom:6px; }
+  a { color:var(--accent); }
+  code { background:rgba(127,127,127,.14); padding:1px 5px; border-radius:4px; font-size:14px; }
+  .back { display:inline-block; margin-bottom:24px; font-size:14px; }
+  footer { border-top:1px solid var(--line); margin-top:48px; padding-top:20px;
+           color:var(--muted); font-size:14px; }
+  footer a { margin-right:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">← RankForge Uploader</a>
+
+<header>
+  <h1>Privacy Policy</h1>
+  <p class="sub">Last updated: 20 September 2026</p>
+</header>
+
+<h2>1. Who is responsible</h2>
+<p>Noel Gutmann, Kardinal-von-Galen-Str. 26, 47574 Goch, Germany.<br>
+Contact: <a href="mailto:noel.gutmann@gmail.com">noel.gutmann@gmail.com</a></p>
+
+<h2>2. Scope</h2>
+<p>This policy covers RankForge Uploader ("the application"), a private, locally installed tool used by its developer to publish videos to YouTube channels that he owns. The application is not distributed to other people and has no users other than its developer. It has no registration, no accounts and no public interface, and this website is informational only — it does not process visitor data beyond the standard server logs kept by the hosting provider (GitHub Pages).</p>
+
+<h2>3. Use of YouTube API Services</h2>
+<p>The application uses YouTube API Services. By using it, its operator is bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Access granted to the application can be reviewed and revoked at any time via the <a href="https://myaccount.google.com/permissions">Google security settings page</a>.</p>
+
+<h2>4. What data the application accesses</h2>
+<p>The application authenticates with the developer's own Google Account through OAuth 2.0 and accesses only that account. Specifically it:</p>
+<ul>
+  <li>uploads video files and their metadata (title, description, tags, category, privacy status) to channels owned by that account (<code>videos.insert</code>);</li>
+  <li>sets thumbnails on those uploads (<code>thumbnails.set</code>);</li>
+  <li>reads back the processing status and ID of those same uploads (<code>videos.list</code>).</li>
+</ul>
+<p>It does not access data belonging to any other YouTube user or channel, does not read comments, subscribers or audience data, and does not use YouTube Analytics.</p>
+
+<h2>5. What is stored, and where</h2>
+<p>All data stays on the developer's local machine. Nothing is transmitted to any third party other than Google, and nothing is stored on a server operated by the developer. Stored locally are:</p>
+<ul>
+  <li>the OAuth 2.0 refresh and access token for the developer's own Google Account, kept in a local credentials file with filesystem-level access restrictions;</li>
+  <li>the video ID, upload timestamp and processing status of each of the application's own uploads, kept in a local log so the pipeline can detect failed uploads.</li>
+</ul>
+<p>No other YouTube API data is stored. Authorised YouTube API data other than the items listed above is not retained; where it is used at runtime it is held in memory only and discarded when the process ends, and in no case longer than 30 days.</p>
+
+<h2>6. Sharing</h2>
+<p>No data is sold, shared, transferred or otherwise disclosed to any third party. There is no advertising, no analytics, no tracking and no profiling.</p>
+
+<h2>7. Deletion and revocation</h2>
+<p>Stored tokens and logs are deleted by removing the local credentials and log files. API access can be revoked at any time at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>; revoking access immediately ends the application's ability to reach the account.</p>
+
+<h2>8. Security</h2>
+<p>The application runs on a single machine under the developer's control. Credentials are stored outside version control and are not copied to any other system. All communication with Google APIs uses HTTPS.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, the updated version is published on this page with a new date.</p>
+
+<footer>
+  <a href="index.html">Home</a>
+  <a href="terms.html">Terms of Service</a>
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+</footer>
+
+</div>
+</body>
+</html>
